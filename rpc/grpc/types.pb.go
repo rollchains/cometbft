@@ -8,7 +8,7 @@ import (
 	fmt "fmt"
 	types "github.com/cometbft/cometbft/abci/types"
 	grpc1 "github.com/cosmos/gogoproto/grpc"
-	proto "github.com/cosmos/gogoproto/proto"
+	proto "github.com/gogo/protobuf/proto"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

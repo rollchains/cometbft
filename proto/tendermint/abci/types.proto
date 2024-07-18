@@ -415,6 +415,7 @@ message ExecTxResult {
   repeated Event events     = 7
       [(gogoproto.nullable) = false, (gogoproto.jsontag) = "events,omitempty"];  // nondeterministic
   string codespace = 8;
+  EvmTxInfo evm_tx_info = 9;
 }
 
 // TxResult contains results of executing the transaction.
@@ -491,4 +492,15 @@ message Snapshot {
   uint32 chunks   = 3;  // Number of chunks in the snapshot
   bytes  hash     = 4;  // Arbitrary snapshot hash, equal only if identical
   bytes  metadata = 5;  // Arbitrary application metadata
+}
+
+
+//----------------------------------------
+// EVM Types
+
+message EvmTxInfo {
+  string sender_address = 1;
+  uint64 nonce = 2;
+  string tx_hash = 3;
+  string vm_error = 4;
 }
